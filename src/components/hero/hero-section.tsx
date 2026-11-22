@@ -66,11 +66,6 @@ export function HeroSection() {
                   See my work ↓
                 </Button>
               </a>
-              <Link href="/design-system">
-                <Button variant="secondary" size="lg">
-                  Design System
-                </Button>
-              </Link>
             </div>
           </div>
 

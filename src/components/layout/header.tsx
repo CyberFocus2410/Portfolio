@@ -43,7 +43,6 @@ export function Header() {
     { label: "Certificates", href: "/certificates" },
     { label: "Skills", href: "/skills" },
     { label: "My story", href: "/my-story" },
-    { label: "Design System", href: "/design-system" },
     { label: "Contact", href: "/contact" },
   ];
 

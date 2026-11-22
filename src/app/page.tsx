@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { HeroSection } from "@/components/hero/hero-section";
 import { DoorsStage } from "@/components/doors/doors-stage";
-import { Shield, Sparkles, Code2, ArrowUpRight } from "lucide-react";
+import { Code2, Trophy, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -32,42 +32,26 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Overview Navigation Cards */}
+      {/* Verified Engineering Highlights Section */}
       <Section id="overview" className="bg-[#1A1818] py-16 sm:py-24 border-t border-white/10">
         <Container size="wide">
           <div className="border-b border-white/10 pb-6 mb-8">
-            <Label dotColor="bg-emerald-400">Explore Portfolio Domains</Label>
+            <Label dotColor="bg-emerald-400">Engineering Highlights</Label>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white mt-2 tracking-tight">
-              Engineering Domains & Highlights
+              Projects, Hackathons & Credentials
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card interactive className="p-8 group bg-[#211E1E]">
-              <Shield className="w-8 h-8 text-emerald-400 mb-4" />
-              <Label>Domain Exploration</Label>
-              <h3 className="text-xl font-bold mt-2 text-white group-hover:text-amber-300 transition-colors">
-                Interactive Doors
-              </h3>
-              <p className="text-sm text-[#D1C9BE] mt-2 leading-relaxed">
-                Step through 4 physical-styled arched doors: Cybersecurity, Medical AI, Freelancing Works, and AI/ML.
-              </p>
-              <a
-                href="#doors-stage"
-                className="inline-flex items-center gap-1.5 text-xs font-mono text-white mt-6 group-hover:underline"
-              >
-                Inspect Doors <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-            </Card>
-
+            {/* Card 1: Live Projects */}
             <Card interactive className="p-8 group bg-[#211E1E]">
               <Code2 className="w-8 h-8 text-cyan-400 mb-4" />
-              <Label>Verified Projects</Label>
+              <Label>Verified Work</Label>
               <h3 className="text-xl font-bold mt-2 text-white group-hover:text-cyan-300 transition-colors">
                 Live Repositories
               </h3>
               <p className="text-sm text-[#D1C9BE] mt-2 leading-relaxed">
-                Explore SecureScan AI, Password Strength Analyser, Cardiac Analyst, LaunchLens, and more.
+                Explore SecureScan AI, Password Strength Analyser, Cardiac Analyst, LaunchLens, and open-source tools.
               </p>
               <Link
                 href="/projects"
@@ -77,20 +61,39 @@ export default function HomePage() {
               </Link>
             </Card>
 
+            {/* Card 2: Hackathons */}
             <Card interactive className="p-8 group bg-[#211E1E]">
-              <Sparkles className="w-8 h-8 text-amber-400 mb-4" />
-              <Label>Design Primitives</Label>
+              <Trophy className="w-8 h-8 text-amber-400 mb-4" />
+              <Label>Competitive Engineering</Label>
               <h3 className="text-xl font-bold mt-2 text-white group-hover:text-amber-300 transition-colors">
-                Design System
+                Hackathons & Awards
               </h3>
               <p className="text-sm text-[#D1C9BE] mt-2 leading-relaxed">
-                Inspect color palettes, button pills, cards, labels, tags, and typography tokens.
+                Top 15 Finalist at Vihaan 9.0 (IEEE DTU) and Top 20 Finalist at FoodScope Hackathon (IIIT Delhi offline round).
               </p>
               <Link
-                href="/design-system"
+                href="/hackathons"
                 className="inline-flex items-center gap-1.5 text-xs font-mono text-white mt-6 group-hover:underline"
               >
-                Open Style Guide <ArrowUpRight className="w-3.5 h-3.5" />
+                Explore Hackathons <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+            </Card>
+
+            {/* Card 3: Certifications */}
+            <Card interactive className="p-8 group bg-[#211E1E]">
+              <ShieldCheck className="w-8 h-8 text-emerald-400 mb-4" />
+              <Label>Verified Credentials</Label>
+              <h3 className="text-xl font-bold mt-2 text-white group-hover:text-emerald-300 transition-colors">
+                Certificates & Badges
+              </h3>
+              <p className="text-sm text-[#D1C9BE] mt-2 leading-relaxed">
+                CRTOM Certified Red Team Operations, OPSWAT CIP, HackerRank Python, and 22 verified achievements.
+              </p>
+              <Link
+                href="/certificates"
+                className="inline-flex items-center gap-1.5 text-xs font-mono text-white mt-6 group-hover:underline"
+              >
+                View Certificates <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </Card>
           </div>
