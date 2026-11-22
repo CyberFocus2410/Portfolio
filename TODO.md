@@ -31,13 +31,22 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Build privacy consent banner with granular analytics gating and direct link to privacy policy.
 - [x] Generated standard privacy & cookie policy at `/privacy`.
 
-## Phase 3: Home Hero (Upcoming)
-- [ ] Connect interactive greeting and headline typography.
-- [ ] Refine white desk-calendar flip-card with 9-loop spiral rings, stacked 3D depth, auto-timer, and touch/click role cycling.
-- [ ] Position high-resolution grayscale transparent portrait cutout cropped precisely by bottom container edge.
-- [ ] Connect floating "My ability card" pill and modal dialog with core competencies.
-- [ ] Build responsive bottom status strip (availability dot, location, scroll indicator).
-- [ ] Verify accessibility, screen-reader reading order, and responsive testing across 360px, 768px, and 1440px.
+## Phase 3: Home Hero (Completed)
+- [x] Connect interactive greeting and headline typography ("Hi, I'm Vivan." + "I am a").
+- [x] Refine white desk-calendar flip-card with 11-loop spiral rings, stacked 3D depth, auto-timer, and touch/click role cycling with 8 verified roles.
+- [x] Position high-resolution grayscale transparent portrait cutout cropped precisely by bottom container edge.
+- [x] Connect floating "My ability card" pill and modal dialog with core competencies, DTC education, and Decode Labs internship.
+- [x] Build responsive bottom status strip (availability dot, location, scroll indicator).
+- [x] Verify accessibility, screen-reader reading order, and responsive testing across 360px, 768px, and 1440px.
+
+## Phase 4: Work Page with Doors (Upcoming)
+- [ ] Create `/work` page featuring the arched doors wall ("Magic happens behind the doors").
+- [ ] Build 4 physical arched doors in CSS/SVG: Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects.
+- [ ] Implement brass nameplates, lever handles, keyholes, and fluted panel textures.
+- [ ] Build hover hinge-swing animation, background dimming, and content panel with monospace tagline and checklist.
+- [ ] Build cursor-following "Click to enter" chip badge.
+- [ ] Create door-to-page navigation transition into domain pages.
+- [ ] Implement mobile horizontal scroll-snap strip with tap-to-open interaction.
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).

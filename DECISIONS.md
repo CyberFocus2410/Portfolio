@@ -14,7 +14,7 @@ This document records all architectural, design, and scope decisions made during
 | 2026-11-22 | Feature | Rope Pull Interaction | Silent toggle: pulls cord to toggle ambient warm desk lamp radial glow across screen with spring physics. | Approved |
 | 2026-11-22 | Compliance | Standard Privacy & Cookie Policy | Standard developer policy implemented at `/privacy`: zero tracking without consent, local storage items defined, disclaimer for healthcare prototypes, cookie reset control. | Approved |
 | 2026-11-22 | Assets | Door Rendering Approach | Semantic SVG + CSS 3D perspective transforms for high performance, sharp rendering, and responsive fluid layout. | Approved |
-| 2026-11-22 | Assets | Portrait & Roles Provisioned | User supplied portrait cutout image (processed to transparent grayscale WebP) and 8 specific roles for flip-card cycling. | Approved |
+| 2026-11-22 | Feature | Hero Desk-Calendar & Portrait | 11-ring spiral flip-card cycling 8 user roles (3.2s timer, hover, tap, keyboard), grayscale cutout cropped by bottom boundary, floating ability pill and modal. | Approved |
 | 2026-11-22 | Assets | Certificates Extracted from POSTED.zip | 22 authentic certificates, offer letters, and hackathon awards extracted into `public/certificates/`. | Approved |
 | 2026-11-22 | Architecture | Four Curated Doors | User specified 4 door domains: CyberSecurity Based Projects, Medical Based Projects, Freelancing Works, AI/ML Projects. | Approved |
 | 2026-11-22 | Deployment | Domain Strategy | Vercel deployment first (`.vercel.app`), with custom domain mapping configured in Phase 11. | Approved |
