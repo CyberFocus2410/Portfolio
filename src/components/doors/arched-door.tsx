@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { DoorData } from "@/data/doors-data";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface ArchedDoorProps {
   door: DoorData;
@@ -41,7 +41,7 @@ export function ArchedDoor({
     >
       {/* Outer Door Frame / Portal Trim */}
       <div className="absolute inset-0 rounded-t-[125px] bg-[#141212] border-[10px] sm:border-[12px] border-[#2A2626] shadow-[inset_0_10px_30px_rgba(0,0,0,0.9),0_20px_40px_rgba(0,0,0,0.7)] flex overflow-hidden group-hover:border-[#3D3737] transition-colors">
-        {/* Interior Void & Portal Entrance (Revealed when door swings open) */}
+        {/* Interior Void & Clean Atmospheric Portal (Revealed when door swings open) */}
         <div
           className="absolute inset-0 bg-gradient-to-b from-[#0D0C0C] via-[#141212] to-[#1A1818] flex flex-col items-center justify-center p-4 overflow-hidden"
           style={{
@@ -50,7 +50,7 @@ export function ArchedDoor({
               : "none",
           }}
         >
-          {/* Subtle interior light beam */}
+          {/* Subtle interior light beam radiating outward */}
           <div
             className={`absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent transition-opacity duration-500 ${
               isOpen ? "opacity-100" : "opacity-0"
@@ -59,39 +59,28 @@ export function ArchedDoor({
 
           {/* Perspective Portal Depth Rings */}
           <div
-            className={`absolute inset-4 rounded-t-[100px] border border-white/10 transition-all duration-700 pointer-events-none ${
-              isOpen ? "opacity-60 scale-95" : "opacity-0 scale-75"
+            className={`absolute inset-4 rounded-t-[100px] border transition-all duration-700 pointer-events-none ${
+              isOpen ? "opacity-50 scale-95" : "opacity-0 scale-75"
             }`}
             style={{ borderColor: door.glowColor }}
           />
 
-          {/* Glowing Portal Corridor & Step Inside CTA */}
+          {/* Glowing Ambient Core - Completely Clean (Zero redundant text) */}
           <div
-            className={`relative z-10 flex flex-col items-center gap-3 transition-all duration-300 ${
+            className={`relative z-10 flex flex-col items-center justify-center transition-all duration-500 ${
               isOpen
                 ? "opacity-100 translate-y-0 scale-100"
-                : "opacity-0 translate-y-6 scale-90"
+                : "opacity-0 translate-y-4 scale-90"
             }`}
           >
-            {/* Glowing Orb */}
             <div
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-2xl border border-white/20 transition-transform group-hover:scale-110"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-2xl border border-white/20 transition-transform duration-300 group-hover:scale-110"
               style={{
                 background: `radial-gradient(circle, ${door.glowColor} 0%, rgba(20,18,18,0.9) 70%)`,
               }}
             >
               <Sparkles className="w-7 h-7 sm:w-8 sm:h-8 text-amber-300 animate-pulse" />
             </div>
-
-            {/* Floating Portal Action Pill */}
-            <div className="px-4 py-2 rounded-full bg-white text-[#141212] font-mono font-bold text-xs tracking-wider uppercase shadow-[0_0_25px_rgba(255,255,255,0.7)] flex items-center gap-2 group-hover:scale-105 transition-transform">
-              <span>Step Inside</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </div>
-
-            <span className="text-[10px] sm:text-[11px] font-mono text-[#EDE9E3] font-semibold tracking-widest uppercase text-center px-2">
-              Click to Enter Realm
-            </span>
           </div>
         </div>
 

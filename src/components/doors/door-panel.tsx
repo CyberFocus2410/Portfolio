@@ -38,13 +38,10 @@ export function DoorPanel({ door }: DoorPanelProps) {
       </ul>
 
       {/* Enter Action */}
-      <div className="mt-7 pt-5 border-t border-white/10 flex items-center justify-between gap-4">
-        <span className="text-xs font-mono text-[#D1C9BE]">
-          Click door or button to enter
-        </span>
+      <div className="mt-7 pt-5 border-t border-white/10 flex items-center justify-end">
         <Link
           href={door.href}
-          className="inline-flex items-center justify-center font-bold rounded-full bg-white text-[#1A1818] hover:bg-neutral-100 px-5 py-2.5 text-xs sm:text-sm shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 group/btn"
+          className="inline-flex items-center justify-center font-bold rounded-full bg-white text-[#1A1818] hover:bg-neutral-100 px-6 py-2.5 text-xs sm:text-sm shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 group/btn"
         >
           <span>Enter {door.title}</span>
           <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-200 group-hover/btn:translate-x-1" />
