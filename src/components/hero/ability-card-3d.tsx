@@ -221,54 +221,53 @@ export function AbilityCard3D({ isOpen, onClose }: AbilityCard3DProps) {
             </div>
 
             {/* Upper Frame: Holographic Portrait Section */}
-            <div className="relative rounded-2xl overflow-hidden border-[3px] border-[#c4983d] shadow-[0_8px_20px_rgba(0,0,0,0.7)] bg-[#120f0a] aspect-[4/3] w-full flex items-center justify-center">
+            <div className="relative rounded-2xl overflow-hidden border-[3px] border-[#c4983d] shadow-[0_8px_20px_rgba(0,0,0,0.7)] bg-[#0A0806] h-[220px] sm:h-[260px] w-full flex items-center justify-center">
               {/* Holographic Iridescent Shimmer Background */}
               <div
-                className="absolute inset-0 pointer-events-none opacity-70"
+                className="absolute inset-0 pointer-events-none opacity-60"
                 style={{
                   background:
-                    "linear-gradient(115deg, #ff0077 0%, #7700ff 25%, #00d4ff 50%, #00ff66 75%, #ffea00 100%)",
-                  filter: "blur(20px)",
+                    "radial-gradient(circle at 50% 30%, rgba(245, 213, 145, 0.25) 0%, rgba(120, 0, 255, 0.2) 40%, rgba(0, 212, 255, 0.15) 70%, transparent 100%)",
                 }}
               />
 
-              {/* Holographic Concentric Rings Pattern */}
+              {/* Holographic Concentric Rings / Particle Shimmer */}
               <div
-                className="absolute inset-0 opacity-40 pointer-events-none"
+                className="absolute inset-0 opacity-30 pointer-events-none"
                 style={{
                   backgroundImage:
-                    "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8) 1px, transparent 1px)",
+                    "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 1px, transparent 1px)",
                   backgroundSize: "16px 16px",
                 }}
               />
 
-              {/* Portrait Image */}
-              <div className="relative z-10 w-full h-full flex items-center justify-center overflow-hidden">
+              {/* Portrait Image (Using User Uploaded Full-Body Sticker Cutout) */}
+              <div className="relative z-10 w-full h-full flex items-center justify-center overflow-hidden p-1">
                 <Image
-                  src="/assets/portrait-color.png"
-                  alt="Vivan Mittal - Ability Portrait"
-                  width={420}
-                  height={320}
+                  src="/assets/ability-card-portrait.jpg"
+                  alt="Vivan Mittal - Ability Card Portrait"
+                  width={448}
+                  height={1024}
                   priority
-                  className="object-cover object-top w-full h-full scale-105 transition-transform duration-500 hover:scale-110"
+                  className="object-contain object-center w-full h-full max-h-full transition-transform duration-500 hover:scale-105 drop-shadow-[0_12px_24px_rgba(0,0,0,0.9)]"
                 />
               </div>
 
               {/* Dynamic Rainbow Holographic Foil Over Photo */}
               <motion.div
-                className="absolute inset-0 pointer-events-none mix-blend-color-dodge opacity-50"
+                className="absolute inset-0 pointer-events-none mix-blend-color-dodge opacity-45"
                 style={{
-                  background: `linear-gradient(125deg, transparent 20%, rgba(255, 100, 200, 0.4) 40%, rgba(100, 220, 255, 0.5) 55%, rgba(255, 230, 100, 0.4) 70%, transparent 85%)`,
+                  background: `linear-gradient(125deg, transparent 20%, rgba(255, 100, 200, 0.35) 40%, rgba(100, 220, 255, 0.45) 55%, rgba(255, 230, 100, 0.35) 70%, transparent 85%)`,
                   backgroundPositionX: glareX,
                   backgroundPositionY: glareY,
                 }}
               />
 
               {/* Portrait Corner Ornaments */}
-              <div className="absolute top-1 left-1 w-3 h-3 border-t-2 border-l-2 border-[#ffecb3] pointer-events-none" />
-              <div className="absolute top-1 right-1 w-3 h-3 border-t-2 border-r-2 border-[#ffecb3] pointer-events-none" />
-              <div className="absolute bottom-1 left-1 w-3 h-3 border-b-2 border-l-2 border-[#ffecb3] pointer-events-none" />
-              <div className="absolute bottom-1 right-1 w-3 h-3 border-b-2 border-r-2 border-[#ffecb3] pointer-events-none" />
+              <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t-2 border-l-2 border-[#ffecb3] pointer-events-none z-20" />
+              <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t-2 border-r-2 border-[#ffecb3] pointer-events-none z-20" />
+              <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b-2 border-l-2 border-[#ffecb3] pointer-events-none z-20" />
+              <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b-2 border-r-2 border-[#ffecb3] pointer-events-none z-20" />
             </div>
 
             {/* Middle Filigree Scroll Divider */}
