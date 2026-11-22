@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -10,7 +9,7 @@ import { Section } from "@/components/ui/section";
 import { FlipCard } from "@/components/hero/flip-card";
 import { AbilityModal } from "@/components/hero/ability-modal";
 import { StatusStrip } from "@/components/hero/status-strip";
-import { Sparkles } from "lucide-react";
+import { InteractivePortrait } from "@/components/hero/interactive-portrait";
 
 export function HeroSection() {
   // Roles supplied by user
@@ -42,10 +41,10 @@ export function HeroSection() {
             </Label>
 
             <div className="mt-4 sm:mt-6">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#EDE9E3] leading-[1.05]">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white leading-[1.05]">
                 Hi, I&apos;m Vivan.
               </h1>
-              <p className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#A39A92] mt-1.5 sm:mt-2.5">
+              <p className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#D1C9BE] mt-1.5 sm:mt-2.5">
                 I am a
               </p>
             </div>
@@ -62,11 +61,11 @@ export function HeroSection() {
                   Hire me
                 </Button>
               </Link>
-              <Link href="/work">
+              <a href="#doors-stage">
                 <Button variant="outline" size="lg">
-                  See my work
+                  See my work ↓
                 </Button>
-              </Link>
+              </a>
               <Link href="/design-system">
                 <Button variant="secondary" size="lg">
                   Design System
@@ -75,32 +74,11 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Grayscale Portrait Cutout with Floating Ability Card Pill */}
+          {/* Right Column: Interactive Dual-Layer Portrait with Circular Color Lens Reveal */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative self-end pt-4 sm:pt-8">
-            <div className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px]">
-              {/* Floating "My ability card" Pill */}
-              <button
-                onClick={() => setIsAbilityModalOpen(true)}
-                title="View verified skills and profile"
-                aria-label="Open My ability card"
-                className="absolute top-10 sm:top-14 left-0 sm:-left-4 z-30 px-4 py-2 rounded-full bg-[#1A1818]/90 hover:bg-[#211E1E] text-xs font-mono text-[#EDE9E3] border border-white/20 shadow-2xl backdrop-blur-md flex items-center gap-2 transition-all hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>My ability card</span>
-              </button>
-
-              {/* Portrait Cutout (cut off by bottom edge of container) */}
-              <div className="relative overflow-hidden flex items-end justify-center pointer-events-none">
-                <Image
-                  src="/assets/portrait.webp"
-                  alt="Vivan Mittal - Grayscale Portrait"
-                  width={420}
-                  height={760}
-                  priority
-                  className="w-auto h-[480px] sm:h-[560px] md:h-[620px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] filter contrast-110"
-                />
-              </div>
-            </div>
+            <InteractivePortrait
+              onOpenAbilityModal={() => setIsAbilityModalOpen(true)}
+            />
           </div>
         </div>
       </Container>

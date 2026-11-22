@@ -12,7 +12,7 @@ export const Label = React.forwardRef<HTMLDivElement, LabelProps>(
       <div
         ref={ref}
         className={cn(
-          "inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#A39A92]",
+          "inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-[#D1C9BE] font-semibold",
           className
         )}
         {...props}

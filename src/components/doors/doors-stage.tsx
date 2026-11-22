@@ -96,7 +96,7 @@ export function DoorsStage() {
                 />
                 <button
                   onClick={() => setHoveredDoorId(isOpen ? null : door.id)}
-                  className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/10 text-[#EDE9E3]"
+                  className="text-xs font-mono px-4 py-2 rounded-full bg-white/15 text-white border border-white/20 hover:bg-white/25 transition-colors font-semibold"
                 >
                   {isOpen ? "Hide details" : "Tap for details"}
                 </button>

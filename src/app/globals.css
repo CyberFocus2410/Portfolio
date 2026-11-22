@@ -5,13 +5,17 @@
 :root {
   --color-base: #1a1818;
   --color-surface: #211e1e;
-  --color-text-primary: #ede9e3;
-  --color-text-muted: #a39a92;
-  --color-hairline: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #ffffff;
+  --color-text-muted: #d1c9be;
+  --color-hairline: rgba(255, 255, 255, 0.12);
 }
 
 * {
   box-sizing: border-box;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
 }
 
 html {

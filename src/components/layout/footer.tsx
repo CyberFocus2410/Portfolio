@@ -15,11 +15,11 @@ export function Footer() {
             </Label>
 
             <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-              <span className="text-[#EDE9E3] block">Need something built or secured?</span>
-              <span className="text-[#A39A92] block mt-1">Let&apos;s make it happen.</span>
+              <span className="text-white block">Need something built or secured?</span>
+              <span className="text-[#D1C9BE] block mt-1">Let&apos;s make it happen.</span>
             </h2>
 
-            <p className="mt-4 text-sm sm:text-base text-[#A39A92] max-w-xl leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#D1C9BE] max-w-xl leading-relaxed">
               B.Tech CSE student at Delhi Technical Campus. Open for cybersecurity blue-team roles, AI/ML research prototypes, and freelance web projects.
             </p>
 
@@ -38,12 +38,12 @@ export function Footer() {
           </div>
 
           {/* Columns */}
-          <div className="mt-16 pt-12 border-t border-white/[0.06] grid grid-cols-2 md:grid-cols-4 gap-8 text-xs">
+          <div className="mt-16 pt-12 border-t border-white/[0.08] grid grid-cols-2 md:grid-cols-4 gap-8 text-xs">
             <div>
-              <p className="font-mono text-[#EDE9E3] uppercase tracking-wider mb-4 font-semibold">
+              <p className="font-mono text-white uppercase tracking-wider mb-4 font-bold">
                 Domains
               </p>
-              <ul className="space-y-2.5 text-[#A39A92]">
+              <ul className="space-y-2.5 text-[#D1C9BE]">
                 <li><Link href="/work/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
                 <li><Link href="/work/healthcare-ai" className="hover:text-white transition-colors">Healthcare AI</Link></li>
                 <li><Link href="/work/ai-ml" className="hover:text-white transition-colors">AI & Machine Learning</Link></li>
@@ -53,10 +53,10 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[#EDE9E3] uppercase tracking-wider mb-4 font-semibold">
+              <p className="font-mono text-white uppercase tracking-wider mb-4 font-bold">
                 Navigate
               </p>
-              <ul className="space-y-2.5 text-[#A39A92]">
+              <ul className="space-y-2.5 text-[#D1C9BE]">
                 <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link href="/work" className="hover:text-white transition-colors">Doors</Link></li>
                 <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
@@ -68,13 +68,13 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[#EDE9E3] uppercase tracking-wider mb-4 font-semibold">
+              <p className="font-mono text-white uppercase tracking-wider mb-4 font-bold">
                 Status
               </p>
-              <ul className="space-y-2.5 text-[#A39A92]">
+              <ul className="space-y-2.5 text-[#D1C9BE]">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  <span>Actively seeking internship</span>
+                  <span className="text-white">Actively seeking internship</span>
                 </li>
                 <li>Delhi NCR, India</li>
                 <li>DTC (GGSIPU) · 2025–2029</li>
@@ -83,10 +83,10 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[#EDE9E3] uppercase tracking-wider mb-4 font-semibold">
+              <p className="font-mono text-white uppercase tracking-wider mb-4 font-bold">
                 Connect
               </p>
-              <ul className="space-y-2.5 text-[#A39A92]">
+              <ul className="space-y-2.5 text-[#D1C9BE]">
                 <li><a href="https://github.com/CyberFocus2410" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub ↗</a></li>
                 <li><a href="https://linkedin.com/in/cyberfocus2410" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn ↗</a></li>
                 <li><a href="mailto:cyberfocus2410@gmail.com" className="hover:text-white transition-colors">cyberfocus2410@gmail.com</a></li>
@@ -95,7 +95,7 @@ export function Footer() {
           </div>
 
           {/* Bottom copyright line */}
-          <div className="mt-12 pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between text-xs text-[#A39A92] gap-4">
+          <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between text-xs text-[#D1C9BE] gap-4">
             <p>© {new Date().getFullYear()} Vivan Mittal. Built with Next.js & Framer Motion.</p>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="hover:text-white transition-colors">

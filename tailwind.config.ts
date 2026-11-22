@@ -14,9 +14,9 @@ const config: Config = {
         surface: "#211E1E",
         "surface-elevated": "#292525",
         text: {
-          primary: "#EDE9E3",
-          muted: "#A39A92",
-          dim: "#6B645E",
+          primary: "#FFFFFF",
+          muted: "#D1C9BE",
+          dim: "#9E958C",
         },
         hairline: "rgba(255, 255, 255, 0.08)",
         "hairline-strong": "rgba(255, 255, 255, 0.16)",
