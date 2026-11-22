@@ -21,3 +21,4 @@ This document records all architectural, design, and scope decisions made during
 | 2026-11-22 | Assets | Certificates Extracted from POSTED.zip | 22 authentic certificates, offer letters, and hackathon awards extracted into `public/certificates/`. | Approved |
 | 2026-11-22 | Architecture | Four Curated Doors | User specified 4 door domains: CyberSecurity Based Projects, Medical Based Projects, Freelancing Works, AI/ML Projects. | Approved |
 | 2026-11-22 | Deployment | Domain Strategy | Vercel deployment first (`.vercel.app`), with custom domain mapping configured in Phase 11. | Approved |
+| 2026-11-22 | CMS | Sanity Studio v3 Architecture | Embedded Studio at `/studio` with `NextStudio`, 10 schemas, mobile phone editing guide in `README.md`, `styled-components` integration, revalidation webhook at `/api/revalidate`, and authentic seed data fallback layer (`src/sanity/seed-data.ts`). | Approved |

@@ -48,13 +48,21 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Create door-to-page navigation transition into domain pages (`/work/[domain]`).
 - [x] Implement mobile horizontal scroll-snap strip with tap-to-open interaction.
 
-## Phase 5: CMS (Sanity) (Upcoming)
-- [ ] Initialize Sanity configuration and client (`sanity.config.ts`, `src/sanity/`).
-- [ ] Define schemas: project, hackathon, certificate, badge, skill, experience, education, door, role, siteSettings.
-- [ ] Implement dynamically computed certificate validity status logic (Valid, Expiring soon within 90 days, Expired, No expiry).
-- [ ] Set up secure revalidation webhook endpoint (`/api/revalidate`).
-- [ ] Seed CMS records strictly from verified seed facts and authentic `POSTED` certificates.
-- [ ] Write phone browser editing guide in `README.md`.
+## Phase 5: CMS (Sanity) (Completed)
+- [x] Initialize Sanity configuration and client (`sanity.config.ts`, `src/sanity/client.ts`).
+- [x] Define 10 schemas: project, hackathon, certificate, badge, skill, experience, education, door, role, siteSettings.
+- [x] Implement dynamically computed certificate validity status logic (`src/lib/certificate-utils.ts`: Valid, Expiring soon within 90 days, Expired, No expiry) and verified with automated test suite.
+- [x] Set up secure revalidation webhook endpoint (`/api/revalidate`) with secret token authentication and route purge.
+- [x] Seed CMS records strictly from verified seed facts and authentic `POSTED` certificates (`src/sanity/seed-data.ts`).
+- [x] Write phone browser editing guide in `README.md` for mobile Sanity Studio document authoring and PDF/image uploads.
+- [x] Verified embedded Studio at `/studio` with NextStudio and styled-components integration.
+
+## Phase 6: Domain Pages & Projects (Upcoming)
+- [ ] Build `/projects` index page with domain filtering tabs (All, Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects, Apps & Mobile).
+- [ ] Build individual project detail pages (`/projects/[slug]`) with case study layout, live URLs, GitHub repos, and tech badges.
+- [ ] Build domain showcase pages (`/work/[domain]`) linked directly from the arched doors.
+- [ ] Render interactive device mockups (realistic monitor browser frames and mobile phone frames) for showcased projects.
+- [ ] Embed prominent non-medical research disclaimers on all healthcare AI projects (Cardiac Analyst, PneumoVision, Health Vault).
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).
