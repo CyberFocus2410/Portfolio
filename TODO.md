@@ -39,14 +39,22 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Build responsive bottom status strip (availability dot, location, scroll indicator).
 - [x] Verify accessibility, screen-reader reading order, and responsive testing across 360px, 768px, and 1440px.
 
-## Phase 4: Work Page with Doors (Upcoming)
-- [ ] Create `/work` page featuring the arched doors wall ("Magic happens behind the doors").
-- [ ] Build 4 physical arched doors in CSS/SVG: Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects.
-- [ ] Implement brass nameplates, lever handles, keyholes, and fluted panel textures.
-- [ ] Build hover hinge-swing animation, background dimming, and content panel with monospace tagline and checklist.
-- [ ] Build cursor-following "Click to enter" chip badge.
-- [ ] Create door-to-page navigation transition into domain pages.
-- [ ] Implement mobile horizontal scroll-snap strip with tap-to-open interaction.
+## Phase 4: Work Page with Doors (Completed)
+- [x] Create `/work` page featuring the arched doors wall ("Magic happens behind the doors").
+- [x] Build 4 physical arched doors in CSS/SVG: Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects.
+- [x] Implement brass nameplates, lever handles, keyholes, and fluted panel textures.
+- [x] Build hover hinge-swing animation, background dimming, and content panel with monospace tagline and checklist.
+- [x] Build cursor-following "Click to enter" chip badge.
+- [x] Create door-to-page navigation transition into domain pages (`/work/[domain]`).
+- [x] Implement mobile horizontal scroll-snap strip with tap-to-open interaction.
+
+## Phase 5: CMS (Sanity) (Upcoming)
+- [ ] Initialize Sanity configuration and client (`sanity.config.ts`, `src/sanity/`).
+- [ ] Define schemas: project, hackathon, certificate, badge, skill, experience, education, door, role, siteSettings.
+- [ ] Implement dynamically computed certificate validity status logic (Valid, Expiring soon within 90 days, Expired, No expiry).
+- [ ] Set up secure revalidation webhook endpoint (`/api/revalidate`).
+- [ ] Seed CMS records strictly from verified seed facts and authentic `POSTED` certificates.
+- [ ] Write phone browser editing guide in `README.md`.
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).
