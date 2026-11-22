@@ -22,14 +22,22 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Extracted 22 authentic certificate and achievement documents into `public/certificates/`.
 - [x] Launched localhost development server on `http://localhost:3000`.
 
-## Phase 2: Global Chrome (Upcoming)
-- [ ] Refine sticky top nav with animated active-link underline.
-- [ ] Connect live local-time & date pill with timezone synchronization.
-- [ ] Build interactive hanging rope pull with spring physics & warm lamp glow overlay.
-- [ ] Implement circular back-to-top button with dynamic scroll-progress ring.
-- [ ] Build page preloader with percentage counter and "Click to enter" gate.
-- [ ] Implement curtain wipe page transitions.
-- [ ] Build privacy consent banner with granular analytics gating.
+## Phase 2: Global Chrome (Completed)
+- [x] Refine sticky top nav with animated active-link underline.
+- [x] Connect live local-time & date pill with timezone synchronization.
+- [x] Build interactive hanging rope pull with spring physics & warm lamp glow overlay (silent by default).
+- [x] Implement circular back-to-top button with dynamic scroll-progress ring.
+- [x] Build page preloader with percentage counter, "Click to enter" gate, and session memory.
+- [x] Build privacy consent banner with granular analytics gating and direct link to privacy policy.
+- [x] Generated standard privacy & cookie policy at `/privacy`.
+
+## Phase 3: Home Hero (Upcoming)
+- [ ] Connect interactive greeting and headline typography.
+- [ ] Refine white desk-calendar flip-card with 9-loop spiral rings, stacked 3D depth, auto-timer, and touch/click role cycling.
+- [ ] Position high-resolution grayscale transparent portrait cutout cropped precisely by bottom container edge.
+- [ ] Connect floating "My ability card" pill and modal dialog with core competencies.
+- [ ] Build responsive bottom status strip (availability dot, location, scroll indicator).
+- [ ] Verify accessibility, screen-reader reading order, and responsive testing across 360px, 768px, and 1440px.
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).
