@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Tag } from "@/components/ui/tag";
 import { Button } from "@/components/ui/button";
 import { DOORS_DATA } from "@/data/doors-data";
+import { ProjectVisual } from "@/components/projects/project-visual";
 import { ArrowLeft, ExternalLink, Github, Monitor } from "lucide-react";
 
 interface DomainPageProps {
@@ -232,22 +233,19 @@ export default async function DomainPage({ params }: DomainPageProps) {
                   </div>
                 </div>
 
-                {/* Right: Device Mockup Placeholder matching Screenshot 4 */}
+                {/* Right: Device Mockup with Live Visual UI */}
                 <div className="lg:col-span-5 flex justify-center">
-                  <div className="w-full max-w-md rounded-2xl bg-[#141212] border border-white/15 p-4 shadow-2xl flex flex-col items-center">
+                  <div className="w-full max-w-md rounded-2xl bg-[#141212] border border-white/15 p-2 shadow-2xl flex flex-col items-center">
                     {/* Monitor Screen Frame */}
-                    <div className="w-full aspect-video rounded-xl bg-[#1A1818] border border-white/10 flex flex-col items-center justify-center p-6 text-center">
-                      <Monitor className="w-8 h-8 text-neutral-500 mb-2" />
-                      <span className="text-xs font-mono text-[#EDE9E3] font-bold">
-                        {project.title}
-                      </span>
-                      <span className="text-[11px] text-[#A39A92] mt-1">
-                        Live Preview & Mockup Display
-                      </span>
+                    <div className="w-full rounded-xl overflow-hidden bg-[#1A1818] border border-white/10">
+                      <ProjectVisual
+                        slug={project.title.toLowerCase().replace(/\s+/g, "-")}
+                        title={project.title}
+                      />
                     </div>
                     {/* Monitor Stand */}
-                    <div className="w-8 h-4 bg-[#2A2626] mt-2 rounded-t-sm" />
-                    <div className="w-20 h-1.5 bg-[#3B3535] rounded-full" />
+                    <div className="w-8 h-3 bg-[#2A2626] mt-1.5 rounded-t-sm" />
+                    <div className="w-20 h-1 bg-[#3B3535] rounded-full" />
                   </div>
                 </div>
               </div>

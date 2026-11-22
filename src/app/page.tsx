@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/section";
 import { HeroSection } from "@/components/hero/hero-section";
 import { DoorsStage } from "@/components/doors/doors-stage";
 import { TechArsenal } from "@/components/home/tech-arsenal";
+import { EducationExperience } from "@/components/home/education-experience";
 import { Code2, Trophy, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
@@ -35,6 +36,9 @@ export default function HomePage() {
 
       {/* Tech Arsenal Section matching uploaded badges */}
       <TechArsenal />
+
+      {/* Education & Experience Window directly on front page */}
+      <EducationExperience />
 
       {/* Verified Engineering Highlights Section */}
       <Section id="overview" className="bg-[#1A1818] py-16 sm:py-24 border-t border-white/10">

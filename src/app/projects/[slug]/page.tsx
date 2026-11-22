@@ -110,6 +110,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               title={project.title}
               domain={project.domainLabel}
               stack={project.stack}
+              slug={project.slug}
               repoUrl={project.repoUrl}
               liveUrl={project.liveUrl}
             />

@@ -33,13 +33,13 @@ const MILESTONES: StoryMilestone[] = [
   {
     year: "2025",
     badge: "SECURITY FOUNDATIONS",
-    title: "Blue Team Mastery & Cryptographic Labs",
+    title: "Blue Team Operations & Cryptographic Labs",
     subtitle: "Independent Research & Tooling",
     description:
       "Deep-dived into blue team defensive operations, packet capture inspection via Wireshark, and cryptographic implementations. Designed and built Krypta to deconstruct modern symmetric and asymmetric cipher suites.",
     highlights: [
       "Built Krypta cryptographic laboratory (AES-GCM, RSA, classical ciphers)",
-      "Mastered Kali Linux distributions, bash scripting, and OWASP Top 10 auditing",
+      "Specialized in Kali Linux distributions, bash scripting, and OWASP Top 10 auditing",
       "Earned HackerRank Python Certification and collegiate coding distinctions",
     ],
     icon: <Shield className="w-5 h-5 text-blue-300" />,
