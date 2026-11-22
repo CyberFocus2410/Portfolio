@@ -9,17 +9,56 @@ import { Preloader } from "@/components/chrome/preloader";
 import { ConsentBanner } from "@/components/chrome/consent-banner";
 
 export const metadata: Metadata = {
-  title: "Vivan Mittal | Cybersecurity & AI Portfolio",
+  metadataBase: new URL("https://vivanmittal.cv"),
+  title: {
+    default: "Vivan Mittal | Cybersecurity & AI Portfolio",
+    template: "%s | Vivan Mittal",
+  },
   description:
-    "Personal portfolio of Vivan Mittal. B.Tech Computer Science student at Delhi Technical Campus (GGSIPU). Cybersecurity Blue Teamer, AI/ML engineer, and web developer.",
-  authors: [{ name: "Vivan Mittal" }],
+    "Personal portfolio of Vivan Mittal. B.Tech Computer Science student at Delhi Technical Campus (GGSIPU). Cybersecurity Blue Teamer, AI/ML engineer, and software developer.",
+  authors: [{ name: "Vivan Mittal", url: "https://vivanmittal.cv" }],
+  creator: "Vivan Mittal",
+  publisher: "Vivan Mittal",
   keywords: [
     "Vivan Mittal",
     "Cybersecurity Portfolio",
-    "Blue Team",
+    "Blue Team Operations",
     "AI ML Engineer",
     "Delhi Technical Campus",
+    "GGSIPU",
+    "Decode Labs",
+    "Vihaan 9.0 Finalist",
+    "FoodScope",
+    "vivanmittal.cv",
   ],
+  alternates: {
+    canonical: "https://vivanmittal.cv",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://vivanmittal.cv",
+    title: "Vivan Mittal | Cybersecurity & AI Portfolio",
+    description:
+      "B.Tech CSE student at Delhi Technical Campus (GGSIPU). Cybersecurity Blue Teamer, AI/ML engineer, and software developer.",
+    siteName: "Vivan Mittal Portfolio",
+    images: [
+      {
+        url: "/assets/portrait-color.png",
+        width: 1200,
+        height: 630,
+        alt: "Vivan Mittal Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vivan Mittal | Cybersecurity & AI Portfolio",
+    description:
+      "B.Tech CSE student at Delhi Technical Campus. Cybersecurity Blue Teamer, AI/ML engineer, and developer.",
+    images: ["/assets/portrait-color.png"],
+    creator: "@CyberFocus2410",
+  },
 };
 
 export default function RootLayout({
