@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { DoorData } from "@/data/doors-data";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -13,20 +12,14 @@ interface DoorPanelProps {
 
 export function DoorPanel({ door }: DoorPanelProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-      className="p-6 sm:p-8 rounded-3xl bg-[#211E1E]/95 border border-white/15 backdrop-blur-md shadow-2xl max-w-md w-full"
-    >
+    <div className="p-7 sm:p-8 rounded-3xl bg-[#1A1818]/95 border border-white/20 backdrop-blur-xl shadow-[0_25px_60px_rgba(0,0,0,0.95)] max-w-lg w-full">
       {/* Domain Title */}
-      <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+      <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
         {door.title}
       </h3>
 
       {/* Monospace Tagline */}
-      <p className="mt-2 text-xs font-mono tracking-wider text-[#D1C9BE] uppercase font-semibold">
+      <p className="mt-2 text-xs font-mono tracking-wider text-amber-300 uppercase font-bold">
         {door.tagline}
       </p>
 
@@ -43,7 +36,7 @@ export function DoorPanel({ door }: DoorPanelProps) {
       </ul>
 
       {/* Enter Action */}
-      <div className="mt-8 pt-5 border-t border-white/10 flex items-center justify-between">
+      <div className="mt-7 pt-5 border-t border-white/10 flex items-center justify-between">
         <span className="text-xs font-mono text-[#D1C9BE]">
           Click door or button to enter
         </span>
@@ -53,6 +46,6 @@ export function DoorPanel({ door }: DoorPanelProps) {
           </Button>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }

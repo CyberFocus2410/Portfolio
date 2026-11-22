@@ -2,13 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
 
-interface InteractivePortraitProps {
-  onOpenAbilityModal: () => void;
-}
-
-export function InteractivePortrait({ onOpenAbilityModal }: InteractivePortraitProps) {
+export function InteractivePortrait() {
   const wrapperRef = React.useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = React.useState(false);
   const [lensPos, setLensPos] = React.useState({ x: 0, y: 0 });
@@ -36,17 +31,6 @@ export function InteractivePortrait({ onOpenAbilityModal }: InteractivePortraitP
 
   return (
     <div className="relative flex justify-center items-end">
-      {/* Floating "My ability card" Pill */}
-      <button
-        onClick={onOpenAbilityModal}
-        title="View verified skills and profile"
-        aria-label="Open My ability card"
-        className="absolute top-10 sm:top-14 left-2 sm:-left-6 z-40 px-4 py-2 rounded-full bg-[#1A1818]/95 hover:bg-[#211E1E] text-xs font-mono text-white border border-white/30 shadow-2xl backdrop-blur-md flex items-center gap-2 transition-all hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer"
-      >
-        <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-        <span className="font-semibold">My ability card</span>
-      </button>
-
       {/* The Image Stage: Base and Color Overlay Locked 1:1 in the EXACT same dimensions */}
       <div
         ref={wrapperRef}

@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { HeroSection } from "@/components/hero/hero-section";
 import { DoorsStage } from "@/components/doors/doors-stage";
+import { TechArsenal } from "@/components/home/tech-arsenal";
 import { Code2, Trophy, ShieldCheck, ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
@@ -22,7 +23,7 @@ export default function HomePage() {
             Magic happens behind the doors
           </h2>
           <p className="text-sm sm:text-base text-[#D1C9BE] mt-3 max-w-xl mx-auto leading-relaxed">
-            Hover or tap any door to inspect its capabilities, or click to enter the dedicated domain case studies.
+            Hover or tap any door to reveal its capabilities, or click to enter the dedicated domain case studies.
           </p>
         </Container>
 
@@ -31,6 +32,9 @@ export default function HomePage() {
           <DoorsStage />
         </div>
       </Section>
+
+      {/* Tech Arsenal Section matching uploaded badges */}
+      <TechArsenal />
 
       {/* Verified Engineering Highlights Section */}
       <Section id="overview" className="bg-[#1A1818] py-16 sm:py-24 border-t border-white/10">

@@ -6,7 +6,7 @@ import { DOORS_DATA, DoorData } from "@/data/doors-data";
 import { ArchedDoor } from "@/components/doors/arched-door";
 import { DoorPanel } from "@/components/doors/door-panel";
 import { CursorChip } from "@/components/doors/cursor-chip";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function DoorsStage() {
   const router = useRouter();
@@ -15,6 +15,7 @@ export function DoorsStage() {
   const [isMouseOverStage, setIsMouseOverStage] = React.useState(false);
 
   const activeDoor = DOORS_DATA.find((d) => d.id === hoveredDoorId) || null;
+  const hoveredIndex = DOORS_DATA.findIndex((d) => d.id === hoveredDoorId);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     setMousePos({ x: e.clientX, y: e.clientY });
@@ -41,9 +42,9 @@ export function DoorsStage() {
       />
 
       {/* Doors Wall Container */}
-      <div className="relative min-h-[580px] sm:min-h-[640px] md:min-h-[700px] flex flex-col justify-end items-center px-4 sm:px-8 pb-12 pt-8">
-        {/* Desktop View: Horizontal Row of Doors & Overlay Panel */}
-        <div className="hidden lg:flex items-end justify-center gap-8 xl:gap-12 relative z-10 w-full max-w-7xl">
+      <div className="relative min-h-[520px] sm:min-h-[580px] md:min-h-[640px] flex flex-col justify-end items-center px-4 sm:px-8 pb-12 pt-6">
+        {/* Desktop View: Horizontal Row of Doors & Overlay Panel Hovering on the Side */}
+        <div className="hidden lg:flex items-end justify-center gap-8 xl:gap-12 relative z-10 w-full max-w-7xl min-h-[480px]">
           {DOORS_DATA.map((door) => {
             const isOpen = hoveredDoorId === door.id;
             const isDimmed = hoveredDoorId !== null && !isOpen;
@@ -55,23 +56,30 @@ export function DoorsStage() {
                   isOpen={isOpen}
                   isDimmed={isDimmed}
                   onHoverStart={() => setHoveredDoorId(door.id)}
-                  onHoverEnd={() => {
-                    // Slight delay or retain until mouse leaves
-                  }}
+                  onHoverEnd={() => {}}
                   onSelect={() => handleSelectDoor(door)}
                 />
               </div>
             );
           })}
-        </div>
 
-        {/* Hover Information Panel (Floats right of active door or centered overlay) */}
-        <div className="hidden lg:block relative z-20 mt-8 min-h-[200px] w-full max-w-2xl">
+          {/* Floating Information Panel hovering directly OVER the other doors on the side */}
           <AnimatePresence mode="wait">
             {activeDoor && (
-              <div className="flex justify-center">
+              <motion.div
+                key={activeDoor.id}
+                initial={{ opacity: 0, x: hoveredIndex <= 1 ? 40 : -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className={`absolute top-1/2 -translate-y-1/2 z-30 pointer-events-auto max-w-md xl:max-w-lg w-full ${
+                  hoveredIndex <= 1
+                    ? "right-6 xl:right-16"
+                    : "left-6 xl:left-16"
+                }`}
+              >
                 <DoorPanel door={activeDoor} />
-              </div>
+              </motion.div>
             )}
           </AnimatePresence>
         </div>
