@@ -2,11 +2,13 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { DOORS_DATA, DoorData } from "@/data/doors-data";
 import { ArchedDoor } from "@/components/doors/arched-door";
 import { DoorPanel } from "@/components/doors/door-panel";
 import { CursorChip } from "@/components/doors/cursor-chip";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export function DoorsStage() {
   const router = useRouter();
@@ -72,6 +74,7 @@ export function DoorsStage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
+                onMouseEnter={() => setHoveredDoorId(activeDoor.id)}
                 className={`absolute top-1/2 -translate-y-1/2 z-30 pointer-events-auto max-w-md xl:max-w-lg w-full ${
                   hoveredIndex <= 1
                     ? "right-6 xl:right-16"
@@ -102,12 +105,21 @@ export function DoorsStage() {
                   onHoverEnd={() => {}}
                   onSelect={() => handleSelectDoor(door)}
                 />
-                <button
-                  onClick={() => setHoveredDoorId(isOpen ? null : door.id)}
-                  className="text-xs font-mono px-4 py-2 rounded-full bg-white/15 text-white border border-white/20 hover:bg-white/25 transition-colors font-semibold"
-                >
-                  {isOpen ? "Hide details" : "Tap for details"}
-                </button>
+                <div className="flex items-center gap-2">
+                  <Link
+                    href={door.href}
+                    className="inline-flex items-center gap-1.5 text-xs font-mono px-4 py-2 rounded-full bg-white text-[#141212] font-bold shadow-md hover:bg-neutral-100 transition-colors"
+                  >
+                    <span>Enter {door.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <button
+                    onClick={() => setHoveredDoorId(isOpen ? null : door.id)}
+                    className="text-xs font-mono px-4 py-2 rounded-full bg-white/15 text-white border border-white/20 hover:bg-white/25 transition-colors font-semibold"
+                  >
+                    {isOpen ? "Hide details" : "Checklist"}
+                  </button>
+                </div>
                 {isOpen && (
                   <div className="w-[300px]">
                     <DoorPanel door={door} />
@@ -118,14 +130,9 @@ export function DoorsStage() {
           })}
         </div>
 
-        {/* Floor and Skirting Board Base matching Screenshot 2 */}
-        <div className="absolute bottom-0 inset-x-0 z-0">
-          {/* Skirting Board Molding */}
-          <div className="w-full h-4 bg-[#2A2626] border-t border-white/10 shadow-[0_-2px_10px_rgba(0,0,0,0.8)]" />
-          <div className="w-full h-2 bg-[#1A1818] border-t border-black" />
-          {/* Floor Planks with Dot Grid Texture */}
-          <div className="w-full h-10 bg-gradient-to-b from-[#141212] to-[#0D0C0C] border-t border-white/5 bg-dot-grid" />
-        </div>
+        {/* Ground Line & Floor Glow */}
+        <div className="w-full max-w-6xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mt-8" />
+        <div className="w-1/2 max-w-md h-12 bg-amber-500/5 blur-2xl rounded-full pointer-events-none -mt-6" />
       </div>
     </div>
   );
