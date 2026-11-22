@@ -57,12 +57,21 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Write phone browser editing guide in `README.md` for mobile Sanity Studio document authoring and PDF/image uploads.
 - [x] Verified embedded Studio at `/studio` with NextStudio and styled-components integration.
 
-## Phase 6: Domain Pages & Projects (Upcoming)
-- [ ] Build `/projects` index page with domain filtering tabs (All, Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects, Apps & Mobile).
-- [ ] Build individual project detail pages (`/projects/[slug]`) with case study layout, live URLs, GitHub repos, and tech badges.
-- [ ] Build domain showcase pages (`/work/[domain]`) linked directly from the arched doors.
-- [ ] Render interactive device mockups (realistic monitor browser frames and mobile phone frames) for showcased projects.
-- [ ] Embed prominent non-medical research disclaimers on all healthcare AI projects (Cardiac Analyst, PneumoVision, Health Vault).
+## Phase 6: Domain Pages & Projects (Completed)
+- [x] Build `/projects` index page with domain filtering tabs (All, Cybersecurity, Medical AI, Freelancing Works, AI/ML Projects, Apps & Mobile).
+- [x] Build individual project detail pages (`/projects/[slug]`) with case study layout, live URLs, GitHub repos, and tech badges.
+- [x] Build domain showcase pages (`/work/[domain]`) linked directly from the arched doors.
+- [x] Render interactive device mockups (realistic monitor browser frames and mobile phone frames) for showcased projects.
+- [x] Embed prominent non-medical research disclaimers on all healthcare AI projects (Cardiac Analyst, PneumoVision, Health Vault).
+
+## Phase 7: Hackathons, Certificates & Skills (Completed)
+- [x] Build `/hackathons` showcase with verified distinctions (Vihaan 9.0 Top 15, FoodScope Top 20, SIH 2025 Nominee, HackHazards '26, Thoughtworks HackFest).
+- [x] Build `/certificates` registry with all 22 authentic documents from `POSTED.zip`, category filtering, search, and dynamic validity calculation badges.
+- [x] Build `/skills` Tech Arsenal matrix with proficiency levels, categorization, and linked project references.
+
+## Phase 8: My Story & Contact (Completed)
+- [x] Build `/my-story` split layout with sticky milestone year indicator and synced vertical chronological timeline.
+- [x] Build `/contact` collaboration page with interactive inquiry form, email copy, GitHub link, and base location.
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).
