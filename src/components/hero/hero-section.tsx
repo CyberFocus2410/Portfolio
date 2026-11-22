@@ -87,8 +87,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Interactive Dual-Layer Portrait with Clean Unobstructed Silhouette */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end relative self-end pt-4 sm:pt-8">
+          {/* Right Column: Interactive Dual-Layer Portrait with Zoomed Professional Presence */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-center relative self-end pt-4 sm:pt-8 lg:-translate-x-6 xl:-translate-x-10">
             <InteractivePortrait />
           </div>
         </div>

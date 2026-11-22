@@ -26,12 +26,12 @@ export function InteractivePortrait() {
     }
   };
 
-  // Lens radius in px
-  const lensRadius = 90;
+  // Lens radius in px for circular color reveal
+  const lensRadius = 100;
 
   return (
     <div className="relative flex justify-center items-end">
-      {/* The Image Stage: Base and Color Overlay Locked 1:1 in the EXACT same dimensions */}
+      {/* The Image Stage: Zoomed in for stronger presence, base and color overlay locked 1:1 */}
       <div
         ref={wrapperRef}
         onMouseEnter={() => setIsHovered(true)}
@@ -40,7 +40,7 @@ export function InteractivePortrait() {
         onTouchStart={() => setIsHovered(true)}
         onTouchEnd={() => setIsHovered(false)}
         onTouchMove={handleTouchMove}
-        className="relative inline-block overflow-hidden cursor-crosshair select-none"
+        className="relative inline-block overflow-hidden cursor-crosshair select-none origin-bottom scale-105 sm:scale-110 md:scale-115 transition-transform duration-300"
       >
         {/* Layer 1: Base Grayscale Portrait */}
         <div className="relative block">
@@ -50,7 +50,7 @@ export function InteractivePortrait() {
             width={301}
             height={1024}
             priority
-            className="w-auto h-[480px] sm:h-[560px] md:h-[620px] object-contain object-bottom drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] filter contrast-110 pointer-events-none block"
+            className="w-auto h-[500px] sm:h-[580px] md:h-[640px] lg:h-[680px] object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] filter contrast-110 pointer-events-none block"
           />
         </div>
 
