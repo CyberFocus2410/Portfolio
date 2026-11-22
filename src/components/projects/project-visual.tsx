@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
   ShieldAlert,
   ShieldCheck,
@@ -14,6 +15,9 @@ import {
   Lock,
   Cpu,
   Wifi,
+  Sparkles,
+  ExternalLink,
+  Coffee,
 } from "lucide-react";
 
 interface ProjectVisualProps {
@@ -323,6 +327,57 @@ export function ProjectVisual({ slug, title }: ProjectVisualProps) {
         <div className="pt-2 border-t border-amber-500/20 text-[10px] text-amber-300/80 flex items-center justify-between">
           <span>Supply Chain Anomaly Triage</span>
           <span className="text-amber-300 font-semibold">IIIT Delhi (Top 20 Finalist)</span>
+        </div>
+      </div>
+    );
+  }
+
+  // 8. NIOR Rooftop & Lounge: Luxury Hospitality & 3D Living Deck
+  if (slug === "nior-cafe" || slug.includes("nior") || slug.includes("cafe")) {
+    return (
+      <div className="w-full h-full min-h-[220px] bg-[#120F0D] rounded-xl overflow-hidden border border-[#D4AF37]/30 flex flex-col justify-between font-mono text-xs relative group">
+        {/* Actual High-Res Screenshot of NIOR Cafe */}
+        <div className="relative w-full h-36 sm:h-44 overflow-hidden">
+          <Image
+            src="/assets/projects/nior-cafe.jpg"
+            alt="NIOR Rooftop & Lounge"
+            fill
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          />
+          {/* Subtle dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#120F0D] via-transparent to-black/60 pointer-events-none" />
+
+          {/* Top Demo Tag */}
+          <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between text-[10px]">
+            <span className="px-2.5 py-0.5 rounded-full bg-black/80 text-[#E8DCC4] border border-[#D4AF37]/40 font-semibold backdrop-blur-md flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>nior-cafe.vercel.app</span>
+            </span>
+            <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold backdrop-blur-md">
+              LIVE DEPLOYMENT
+            </span>
+          </div>
+        </div>
+
+        {/* Bottom Details Bar */}
+        <div className="p-3 bg-[#120F0D] border-t border-[#D4AF37]/20 flex flex-col gap-1.5">
+          <div className="flex items-center justify-between">
+            <span className="text-white font-bold tracking-wide text-xs">
+              NIOR • ROOFTOP &amp; LOUNGE
+            </span>
+            <a
+              href="https://nior-cafe.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-300 hover:text-white flex items-center gap-1 text-[11px] font-semibold"
+            >
+              <span>Visit Site</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+          <div className="text-[10px] text-[#A89F91] truncate">
+            28°38&apos;19&quot;N // 77°22&apos;24&quot;E • 5th Floor Starlight Deck • Indirapuram
+          </div>
         </div>
       </div>
     );

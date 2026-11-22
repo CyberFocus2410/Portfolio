@@ -111,12 +111,13 @@ export default async function DomainPage({ params }: DomainPageProps) {
         repoUrl: "https://github.com/CyberFocus2410/VAP-Handicrafts",
       },
       {
-        title: "Specialty Cafe & Roastery Site",
-        label: "FREELANCE CLIENT WORK",
-        subtitle: "Interactive Brand Experience",
+        title: "NIOR Rooftop & Lounge",
+        label: "LUXURY HOSPITALITY & 3D PORTAL",
+        subtitle: "Bespoke Dining, Twilight Soundscape & 3D Terrace Experience",
         description:
-          "Bespoke hospitality landing page featuring rich typography, interactive beverage menus, and local SEO configuration.",
-        tags: ["Web Design", "Mobile First", "Freelance", "Client Project"],
+          "Bespoke luxury hospitality portal for NIOR Rooftop & Lounge (5th Floor Starlight Deck, Indirapuram). Features an interactive 3D terrace atmosphere, ambient twilight soundscape audio, complimentary table reservation requests, and handcrafted dining showcase.",
+        tags: ["Next.js", "Tailwind CSS", "3D Experience", "Framer Motion", "Audio API"],
+        liveUrl: "https://nior-cafe.vercel.app",
       },
     ],
     "ai-ml": [
