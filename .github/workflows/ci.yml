@@ -1,0 +1,43 @@
+name: CI & Security Audit
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  audit-and-lint:
+    name: Security, Lint & Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for secrets with Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Security code scan with Semgrep
+        run: npx --yes semgrep --config=auto .
+
+      - name: Dependency security vulnerability audit
+        run: npm audit --audit-level=high
+
+      - name: Lint source code
+        run: npm run lint
+
+      - name: Verify production build
+        run: npm run build

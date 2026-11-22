@@ -11,13 +11,25 @@ This file logs every missing piece of content, unconfirmed fact, and pending dec
 - [x] Decision 5: Custom domain mapped later; Vercel deployment first.
 - [x] Decision 6: Dark mode only (`#1A1818`) confirmed.
 
-## Phase 1: Scaffold & Design System (Upcoming)
-- [ ] Initialize Next.js 15+ / React 19 project with TypeScript and Tailwind CSS.
-- [ ] Configure Tailwind tokens (colors, font families, tracking, radii).
-- [ ] Install and configure font loading via `next/font` (Plus Jakarta Sans + JetBrains Mono).
-- [ ] Build reusable atomic primitives: Button pill, Card, Tag pill, Monospace label, Section header.
-- [ ] Set up CI pipeline (`.github/workflows/ci.yml`) with Gitleaks, Semgrep, and `npm audit`.
-- [ ] Build `/design-system` style-guide page showcasing all components and tokens.
+## Phase 1: Scaffold & Design System (Completed)
+- [x] Initialize Next.js 15+ / React 19 project with TypeScript and Tailwind CSS.
+- [x] Configure Tailwind tokens (colors, font families, tracking, radii).
+- [x] Install and configure font loading via `next/font` (Plus Jakarta Sans + JetBrains Mono).
+- [x] Build reusable atomic primitives: Button pill, Card, Tag pill, Monospace label, Section header, Container.
+- [x] Set up CI pipeline (`.github/workflows/ci.yml`) with Gitleaks, Semgrep, and `npm audit`.
+- [x] Build `/design-system` style-guide page showcasing all components and tokens.
+- [x] Processed transparent grayscale portrait cutout WebP (`public/assets/portrait.webp`).
+- [x] Extracted 22 authentic certificate and achievement documents into `public/certificates/`.
+- [x] Launched localhost development server on `http://localhost:3000`.
+
+## Phase 2: Global Chrome (Upcoming)
+- [ ] Refine sticky top nav with animated active-link underline.
+- [ ] Connect live local-time & date pill with timezone synchronization.
+- [ ] Build interactive hanging rope pull with spring physics & warm lamp glow overlay.
+- [ ] Implement circular back-to-top button with dynamic scroll-progress ring.
+- [ ] Build page preloader with percentage counter and "Click to enter" gate.
+- [ ] Implement curtain wipe page transitions.
+- [ ] Build privacy consent banner with granular analytics gating.
 
 ## Missing Facts & Content Confirmations
 - [ ] Confirm exact official event name for the IIIT Delhi hackathon ("Fork It Challenge" offline round, Feb 2026).

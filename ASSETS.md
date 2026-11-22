@@ -4,10 +4,11 @@ This file tracks all visual and document assets across project phases.
 
 | Asset | Spec | Status | File Path | Phase | Notes |
 |---|---|---|---|---|---|
-| Portrait cutout | Transparent PNG/WebP, grayscale, 1600px+ tall, half-body | needed | `public/assets/portrait.webp` | Phase 3 | Also request original color version for reference |
-| Roles for flip-card | 3 to 5 short titles backed by real projects | needed | Sanity / Config | Phase 3 | Text string array |
-| Ability-card content | Skills and focus areas | needed | Sanity / Config | Phase 3 | Modal content |
-| Door taglines & checklists | Tagline + 4-5 checklist lines per door | needed | Sanity / Config | Phase 4 | For all 5 domains |
+| Portrait cutout | Transparent PNG/WebP, grayscale, half-body | received | `public/assets/portrait.webp` | Phase 3 | Processed from uploaded JPEG with transparent alpha & grayscale |
+| Roles for flip-card | 8 roles supplied by user | received | `src/app/page.tsx` & Sanity | Phase 3 | Web Dev, App Dev, UI/UX, Freelancer, Cybersecurity Analyst, Pen Tester, Blue Team, Photographer |
+| Ability-card content | Skills and focus areas | received | `src/app/page.tsx` & Sanity | Phase 3 | Cybersecurity Blue Teaming, Threat Detection, Python, Full-stack |
+| Door taglines & checklists | 4 doors: CyberSecurity, Medical, Freelancing, AI/ML | received | `src/app/design-system/page.tsx` & Work | Phase 4 | Configured across 4 domain doors |
+| Certificate files | 22 authentic files extracted from POSTED.zip | received | `public/certificates/` | Phase 7 | CRTOM, FoodScope (IIIT-D), Vihaan 9.0, HackerRank, Decode Labs offer, etc. |
 | Project descriptions | In user's own words per project | needed | Sanity CMS | Phase 6 | Markdown/plain text |
 | Project screenshots (Desktop) | 1600x1000 PNG/WebP | needed | Sanity / `public/projects/` | Phase 6 | 2 to 4 per project |
 | Project screenshots (Mobile) | 1170x2532 PNG/WebP | needed | Sanity / `public/projects/` | Phase 6 | For mobile mockup |
