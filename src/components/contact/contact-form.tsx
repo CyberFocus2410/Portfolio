@@ -116,7 +116,19 @@ export function ContactForm() {
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <div className="pt-2 border-t border-white/10 text-[11px] font-mono text-[#A39A92] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span>
+              DPDPA 2023 Notice: Contact details are processed solely to respond to your inquiry.
+            </span>
+            <a
+              href="/privacy#grievance-officer"
+              className="text-amber-300 hover:underline flex items-center gap-1"
+            >
+              Grievance Officer & Rights ↗
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
             <button
               type="submit"
               disabled={isSubmitting}

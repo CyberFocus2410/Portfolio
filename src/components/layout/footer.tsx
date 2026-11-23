@@ -93,12 +93,46 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Statutory DPDP & Compliance Strip (DPDP-017 & DPDP-010) */}
+          <div className="mt-8 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-col md:flex-row md:items-center justify-between text-xs text-[#A39A92] gap-3 font-mono">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+              <span className="text-[#EDE9E3] font-semibold">DPDP Act, 2023 Compliance:</span>
+              <span>Grievance Officer: <strong className="text-white">Vivan Mittal</strong> (Data Fiduciary)</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 text-[11px]">
+              <a
+                href="mailto:cyberfocus2410@gmail.com"
+                className="text-amber-300 hover:underline"
+              >
+                cyberfocus2410@gmail.com
+              </a>
+              <span className="text-white/20">·</span>
+              <Link
+                href="/privacy#grievance-officer"
+                className="text-white hover:text-amber-300 transition-colors underline"
+              >
+                Grievance Redressal (DPDP-017)
+              </Link>
+              <span className="text-white/20">·</span>
+              <Link
+                href="/privacy#data-principal-rights"
+                className="text-white hover:text-amber-300 transition-colors underline"
+              >
+                Rights Portal (DPDP-010)
+              </Link>
+            </div>
+          </div>
+
           {/* Bottom copyright line */}
-          <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between text-xs text-[#D1C9BE] gap-4">
+          <div className="mt-8 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between text-xs text-[#D1C9BE] gap-4">
             <p>© {new Date().getFullYear()} Vivan Mittal. Built with Next.js & Framer Motion.</p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <Link href="/privacy" className="hover:text-white transition-colors">
-                Privacy & Cookies
+                Privacy & DPDP Notice
+              </Link>
+              <Link href="/privacy#grievance-officer" className="hover:text-white transition-colors">
+                Grievance Officer
               </Link>
               <a href="#top" className="hover:text-white transition-colors flex items-center gap-1 font-mono">
                 Back to top ↑
