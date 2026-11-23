@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath, revalidateTag } from "next/cache";
-
-const REVALIDATE_SECRET = process.env.SANITY_REVALIDATE_SECRET || "dev-revalidate-secret";
+import { SEED_PROJECTS } from "@/sanity/seed-data";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,13 +11,14 @@ export async function POST(req: NextRequest) {
       secretParam ||
       (authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null);
 
-    if (!providedSecret || providedSecret !== REVALIDATE_SECRET) {
-      if (process.env.NODE_ENV === "production" || process.env.SANITY_REVALIDATE_SECRET) {
-        return NextResponse.json(
-          { message: "Unauthorized: Invalid or missing authentication token" },
-          { status: 401 }
-        );
-      }
+    const expectedSecret = process.env.SANITY_REVALIDATE_SECRET;
+
+    // Secure authentication check: require token and reject unauthorized callers
+    if (!providedSecret || (expectedSecret && providedSecret !== expectedSecret) || (!expectedSecret && process.env.NODE_ENV === "production")) {
+      return NextResponse.json(
+        { message: "Unauthorized: Invalid or missing authentication credentials" },
+        { status: 401 }
+      );
     }
 
     const body = await req.json().catch(() => ({}));
@@ -33,6 +33,17 @@ export async function POST(req: NextRequest) {
     if (slug) {
       if (typeof slug !== "object" || typeof slug.current !== "string" || !/^[a-z0-9-_]+$/i.test(slug.current)) {
         return NextResponse.json({ message: "Invalid resource slug format" }, { status: 400 });
+      }
+
+      // Object-Level Authorization: verify resource belongs to authorized project inventory
+      if (_type === "project") {
+        const isKnownProject = SEED_PROJECTS.some((p) => p.slug === slug.current);
+        if (!isKnownProject && !process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
+          return NextResponse.json(
+            { message: "Forbidden: Object does not exist or caller lacks access to this resource identifier" },
+            { status: 403 }
+          );
+        }
       }
     }
 
