@@ -92,16 +92,6 @@ export function InteractivePortrait() {
             <div className="absolute inset-0 rounded-full bg-amber-400/[0.04]" />
           </div>
         )}
-
-        {/* Subtle hover prompt */}
-        <div
-          aria-hidden="true"
-          className={`absolute bottom-4 left-1/2 -translate-x-1/2 z-30 pointer-events-none whitespace-nowrap px-3 py-1 rounded-full bg-black/80 border border-white/20 text-[11px] font-mono text-white/90 shadow-lg backdrop-blur-md transition-opacity duration-300 ${
-            isHovered ? "opacity-0" : "opacity-80"
-          }`}
-        >
-          Hover over portrait to reveal color ✦
-        </div>
       </div>
     </div>
   );
