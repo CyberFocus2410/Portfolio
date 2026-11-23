@@ -339,6 +339,26 @@ export function AbilityCard3D({ isOpen, onClose }: AbilityCard3DProps) {
                 </div>
               </div>
             </div>
+
+            {/* Direct Profile Links on Card */}
+            <div className="mt-2 pt-2 border-t border-[#d4a343]/30 flex items-center justify-between text-[10px] font-mono font-bold text-[#f5d591]">
+              <a
+                href="https://github.com/CyberFocus2410"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white flex items-center gap-1 transition-colors"
+              >
+                <span>GitHub / CyberFocus2410 ↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cyberfocus2410/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white flex items-center gap-1 transition-colors"
+              >
+                <span>LinkedIn / Vivan Mittal ↗</span>
+              </a>
+            </div>
           </div>
 
           {/* Holographic Specular Glare Layer Across Whole Card */}

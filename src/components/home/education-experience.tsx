@@ -16,6 +16,9 @@ import {
   ShieldCheck,
   FileCheck,
   Terminal,
+  Github,
+  Linkedin,
+  ArrowUpRight,
 } from "lucide-react";
 
 export function EducationExperience() {
@@ -256,6 +259,46 @@ export function EducationExperience() {
               </div>
             </div>
           )}
+        </div>
+
+        {/* Verified Professional & Developer Profiles Banner */}
+        <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#211E1E] via-[#1C1A1A] to-[#141212] border border-white/10 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-300 font-bold uppercase tracking-wider">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>Verified Developer &amp; Engineering Credentials</span>
+            </div>
+            <h4 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+              Connect on Professional Networks &amp; Code Repositories
+            </h4>
+            <p className="text-xs text-[#A39A92] leading-relaxed max-w-xl">
+              Inspect open-source codebases, cryptographic laboratories, and reach out directly for internship &amp; engineering opportunities.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+            <a
+              href="https://github.com/CyberFocus2410"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-2xl bg-white/10 hover:bg-white text-white hover:text-[#1A1818] border border-white/15 text-xs font-mono font-bold transition-all duration-200 shadow-md group"
+            >
+              <Github className="w-4 h-4 text-white group-hover:text-[#1A1818] transition-colors" />
+              <span>GitHub / CyberFocus2410</span>
+              <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/cyberfocus2410/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-2xl bg-[#0A66C2] hover:bg-[#004182] text-white border border-[#0A66C2]/40 text-xs font-mono font-bold transition-all duration-200 shadow-md group"
+            >
+              <Linkedin className="w-4 h-4 text-white" />
+              <span>LinkedIn / Vivan Mittal</span>
+              <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          </div>
         </div>
       </Container>
     </Section>

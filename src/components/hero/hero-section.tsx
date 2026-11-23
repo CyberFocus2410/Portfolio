@@ -10,7 +10,7 @@ import { FlipCard } from "@/components/hero/flip-card";
 import { AbilityModal } from "@/components/hero/ability-modal";
 import { StatusStrip } from "@/components/hero/status-strip";
 import { InteractivePortrait } from "@/components/hero/interactive-portrait";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Github, Linkedin, ArrowUpRight } from "lucide-react";
 
 export function HeroSection() {
   // Roles supplied by user
@@ -83,6 +83,38 @@ export function HeroSection() {
                 <Button variant="secondary" size="lg">
                   Tech Arsenal ⚔️
                 </Button>
+              </a>
+            </div>
+
+            {/* Direct Social & Professional Profiles */}
+            <div className="mt-6 pt-2 flex flex-wrap items-center gap-3">
+              <span className="text-xs font-mono text-[#A39A92] uppercase tracking-wider font-semibold">
+                Profiles:
+              </span>
+              <a
+                href="https://github.com/CyberFocus2410"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub Profile - CyberFocus2410"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.14] text-xs font-mono font-bold text-white border border-white/15 hover:border-white/30 shadow-md backdrop-blur-md transition-all duration-200 hover:scale-105 active:scale-95 group"
+              >
+                <Github className="w-3.5 h-3.5 text-white group-hover:text-amber-300 transition-colors" />
+                <span>GitHub</span>
+                <span className="text-white/40 font-normal">/CyberFocus2410</span>
+                <ArrowUpRight className="w-3 h-3 text-white/50 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/cyberfocus2410/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn Profile - Vivan Mittal"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0A66C2]/15 hover:bg-[#0A66C2]/25 text-xs font-mono font-bold text-[#70B5F9] hover:text-white border border-[#0A66C2]/30 hover:border-[#0A66C2]/60 shadow-md backdrop-blur-md transition-all duration-200 hover:scale-105 active:scale-95 group"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#0A66C2] group-hover:text-[#70B5F9] transition-colors" />
+                <span>LinkedIn</span>
+                <span className="text-white/40 font-normal">/in/cyberfocus2410</span>
+                <ArrowUpRight className="w-3 h-3 text-white/50 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
           </div>

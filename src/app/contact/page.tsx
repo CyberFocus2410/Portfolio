@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/section";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact/contact-form";
-import { Mail, Github, MapPin, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Clock, ShieldCheck, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Contact & Collaboration | Vivan Mittal",
@@ -62,6 +62,25 @@ export default function ContactPage() {
                       className="block text-sm sm:text-base font-bold text-white hover:text-amber-300 transition-colors font-mono mt-0.5"
                     >
                       github.com/CyberFocus2410
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 rounded-3xl bg-[#1C1A1A] border border-white/10 hover:border-white/20 transition-all">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-[#0A66C2]/10 border border-[#0A66C2]/20 flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="w-6 h-6 text-[#70B5F9]" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono text-muted-foreground font-semibold">LinkedIn Profile</span>
+                    <a
+                      href="https://www.linkedin.com/in/cyberfocus2410/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm sm:text-base font-bold text-white hover:text-[#70B5F9] transition-colors font-mono mt-0.5"
+                    >
+                      linkedin.com/in/cyberfocus2410
                     </a>
                   </div>
                 </div>
