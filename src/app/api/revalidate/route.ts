@@ -12,12 +12,29 @@ export async function POST(req: NextRequest) {
       secretParam ||
       (authHeader?.startsWith("Bearer ") ? authHeader.slice(7) : null);
 
-    if (providedSecret !== REVALIDATE_SECRET && process.env.NODE_ENV === "production") {
-      return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
+    if (!providedSecret || providedSecret !== REVALIDATE_SECRET) {
+      if (process.env.NODE_ENV === "production" || process.env.SANITY_REVALIDATE_SECRET) {
+        return NextResponse.json(
+          { message: "Unauthorized: Invalid or missing authentication token" },
+          { status: 401 }
+        );
+      }
     }
 
     const body = await req.json().catch(() => ({}));
     const { _type, slug } = body;
+
+    // Strict parameterization and bounded object-level validation (BOLA defense)
+    const ALLOWED_TYPES = ["project", "certificate", "hackathon", "skill", "story", "page"];
+    if (_type && (typeof _type !== "string" || !ALLOWED_TYPES.includes(_type))) {
+      return NextResponse.json({ message: "Invalid entity type" }, { status: 400 });
+    }
+
+    if (slug) {
+      if (typeof slug !== "object" || typeof slug.current !== "string" || !/^[a-z0-9-_]+$/i.test(slug.current)) {
+        return NextResponse.json({ message: "Invalid resource slug format" }, { status: 400 });
+      }
+    }
 
     // Revalidate affected routes
     revalidatePath("/");
